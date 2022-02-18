@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Config - notes</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Arduino</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../arduino/CLI.html"><strong aria-hidden="true">2.1.</strong> CLI</a></li><li class="chapter-item expanded "><a href="../arduino/LoRaWAN.html"><strong aria-hidden="true">2.2.</strong> LoRaWAN</a></li><li class="chapter-item expanded "><a href="../arduino/PlatformIO.html"><strong aria-hidden="true">2.3.</strong> PlatformIO</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Bash</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bash/Misc.html"><strong aria-hidden="true">3.1.</strong> Miscellaneous</a></li><li class="chapter-item expanded "><a href="../bash/Search.html"><strong aria-hidden="true">3.2.</strong> Searching</a></li><li class="chapter-item expanded "><a href="../bash/Web.html"><strong aria-hidden="true">3.3.</strong> Web Functions</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> C++</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../c++/CMake.html"><strong aria-hidden="true">4.1.</strong> CMake</a></li><li class="chapter-item expanded "><a href="../c++/CPMmake.html"><strong aria-hidden="true">4.2.</strong> CPM-Make</a></li><li class="chapter-item expanded "><a href="../c++/JSON.html"><strong aria-hidden="true">4.3.</strong> JSON</a></li><li class="chapter-item expanded "><a href="../c++/LLDB-Cheatsheet.html"><strong aria-hidden="true">4.4.</strong> LLDB (Debugger)</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Docker</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../docker/Commands.html"><strong aria-hidden="true">5.1.</strong> Cheat Sheet</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Git</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Commands.html"><strong aria-hidden="true">6.1.</strong> Cheat Sheet</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Pandoc</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../pandoc/Commands.html"><strong aria-hidden="true">7.1.</strong> Cheat Sheet</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Python</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../python/Dates.html"><strong aria-hidden="true">8.1.</strong> Datetimes</a></li><li class="chapter-item expanded "><a href="../python/Numpy.html"><strong aria-hidden="true">8.2.</strong> Numpy</a></li><li class="chapter-item expanded "><a href="../python/Pandas.html"><strong aria-hidden="true">8.3.</strong> Pandas</a></li><li class="chapter-item expanded "><a href="../python/Plotting.html"><strong aria-hidden="true">8.4.</strong> Plotting</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Raspberry Pi</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../raspberry-pi/Webserver.html"><strong aria-hidden="true">9.1.</strong> Web-server</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Tmux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tmux/Bindings.html"><strong aria-hidden="true">10.1.</strong> Bindings</a></li><li class="chapter-item expanded "><a href="../tmux/Config.html" class="active"><strong aria-hidden="true">10.2.</strong> Config</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Vim</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../vim/Shortcuts.html"><strong aria-hidden="true">11.1.</strong> Cheat Sheet</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="tmux-configuration"><a class="header" href="#tmux-configuration">Tmux Configuration</a></h1>
+<h2 id="description"><a class="header" href="#description">Description</a></h2>
+<p>Settings used for Tmux.</p>
+<h2 id="sourcing-tmux-configuration"><a class="header" href="#sourcing-tmux-configuration">Sourcing Tmux Configuration</a></h2>
+<p>In the terminal.</p>
+<pre><code class="language-bash">tmux source-file ~/.tmux.conf
+</code></pre>
+<p>In Tmux (Requires being in tmux mode (ctrl-a)).</p>
+<pre><code class="language-bash">:source-file ~/.tmux.conf
+</code></pre>
+<h2 id="powerline"><a class="header" href="#powerline">Powerline</a></h2>
+<p>Powerline is a status line plugin for vim and tmux (plus some others).</p>
+<h3 id="installation"><a class="header" href="#installation">Installation</a></h3>
+<p>Powerline requires Python (so if you don't have python you need that). Also you need pip to install.</p>
+<pre><code class="language-bash">pip install powerline status
+# or
+pip3 install powerline-status
+# or
+python3 -m pip install powerline-status
+</code></pre>
+<p>You need to add this line to your .tmux.conf file and then source your configuration.</p>
+<pre><code class="language-bash">source &quot;/usr/local/lib/python3.9/site-packages/powerline/bindings/tmux/powerline.conf&quot;
+</code></pre>
+<p>If you get problems with the installed fonts (i.e. you get question marks in your powerline) you need to install a powerline specific font.</p>
+<p>To do this, navigate to this <a href="https://github.com/powerline/fonts">link</a> and clone the library.</p>
+<pre><code class="language-bash">git clone https://github.com/powerline/fonts
+cd fonts
+./install.sh # Install powerline fonts
+</code></pre>
+<p>Now navigate to your terminal preferences and change your font to a powerline specific font. (I am using &quot;Meslo LG S Regular for Powerline 11pt&quot;).</p>
+<h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
+<pre><code class="language-bash"># -- general -------------------------------------------------------------------
+
+set -g default-terminal &quot;screen-256color&quot; # colors!
+source &quot;/usr/local/lib/python3.9/site-packages/powerline/bindings/tmux/powerline.conf&quot;
+setw -g xterm-keys on
+set -s escape-time 10                     # faster command sequences
+set -sg repeat-time 600                   # increase repeat timeout
+set -s focus-events on
+
+unbind C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+bind C-a send-prefix -2
+
+set -q -g status-utf8 on                  # expect UTF-8 (tmux &lt; 2.2)
+setw -q -g utf8 on
+
+set -g history-limit 5000                 # boost history
+
+# edit configuration
+bind e new-window -n &quot;~/.tmux.conf.local&quot; &quot;EDITOR=\${EDITOR//mvim/vim} &amp;&amp; EDITOR=\${EDITOR//gvim/vim} &amp;&amp; \${EDITOR:-vim} ~/.tmux.conf.local &amp;&amp; tmux source ~/.tmux.conf &amp;&amp; tmux display \&quot;~/.tmux.conf sourced\&quot;&quot;
+
+# reload configuration
+bind r source-file ~/.tmux.conf \; display '~/.tmux.conf sourced'
+
+
+# -- display -------------------------------------------------------------------
+
+set -g base-index 1           # start windows numbering at 1
+setw -g pane-base-index 1     # make pane numbering consistent with windows
+
+setw -g automatic-rename on   # rename window to reflect current program
+set -g renumber-windows on    # renumber windows when a window is closed
+
+set -g set-titles on          # set terminal title
+
+set -g display-panes-time 800 # slightly longer pane indicators display time
+set -g display-time 1000      # slightly longer status messages display time
+
+set -g status-interval 10     # redraw status line every 10 seconds
+
+# clear both screen and history
+bind -n C-l send-keys C-l \; run 'sleep 0.1' \; clear-history
+
+# activity
+set -g monitor-activity on
+set -g visual-activity off
+
+
+# -- navigation ----------------------------------------------------------------
+
+# find session
+bind C-f command-prompt -p find-session 'switch-client -t %%'
+
+# split current window horizontally
+bind - split-window -v
+# split current window vertically
+bind _ split-window -h
+
+# pane navigation
+bind -r h select-pane -L  # move left
+bind -r j select-pane -D  # move down
+bind -r k select-pane -U  # move up
+bind -r l select-pane -R  # move right
+bind &gt; swap-pane -D       # swap current pane with the next one
+bind &lt; swap-pane -U       # swap current pane with the previous one
+
+# maximize current pane
+bind + run 'cut -c3- ~/.tmux.conf | sh -s _maximize_pane &quot;#{session_name}&quot; #D'
+
+# window navigation
+bind Tab last-window        # move to last active window
+
+# toggle mouse
+bind m run &quot;cut -c3- ~/.tmux.conf | sh -s _toggle_mouse&quot;
+
+
+# -- urlview -------------------------------------------------------------------
+
+bind U run &quot;cut -c3- ~/.tmux.conf | sh -s _urlview #{pane_id}&quot;
+
+
+# -- facebook pathpicker -------------------------------------------------------
+
+bind F run &quot;cut -c3- ~/.tmux.conf | sh -s _fpp #{pane_id}&quot;
+
+
+# -- list choice (tmux &lt; 2.4) --------------------------------------------------
+
+# vi-choice is gone in tmux &gt;= 2.4
+run -b 'tmux bind -t vi-choice h tree-collapse 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice l tree-expand 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice K start-of-list 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice J end-of-list 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice H tree-collapse-all 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice L tree-expand-all 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice Escape cancel 2&gt; /dev/null || true'
+
+
+# -- edit mode (tmux &lt; 2.4) ----------------------------------------------------
+
+# vi-edit is gone in tmux &gt;= 2.4
+run -b 'tmux bind -ct vi-edit H start-of-line 2&gt; /dev/null || true'
+run -b 'tmux bind -ct vi-edit L end-of-line 2&gt; /dev/null || true'
+run -b 'tmux bind -ct vi-edit q cancel 2&gt; /dev/null || true'
+run -b 'tmux bind -ct vi-edit Escape cancel 2&gt; /dev/null || true'
+
+
+# -- copy mode -----------------------------------------------------------------
+
+bind Enter copy-mode # enter copy mode
+
+run -b 'tmux bind -t vi-copy v begin-selection 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi v send -X begin-selection 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-copy C-v rectangle-toggle 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi C-v send -X rectangle-toggle 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-copy y copy-selection 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi y send -X copy-selection-and-cancel 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-copy Escape cancel 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi Escape send -X cancel 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-copy H start-of-line 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi H send -X start-of-line 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-copy L end-of-line 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi L send -X end-of-line 2&gt; /dev/null || true'
+
+# copy to macOS clipboard
+if -b 'command -v pbcopy &gt; /dev/null 2&gt;&amp;1' 'bind y run -b &quot;tmux save-buffer - | pbcopy&quot;'
+if -b 'command -v reattach-to-user-namespace &gt; /dev/null 2&gt;&amp;1' 'bind y run -b &quot;tmux save-buffer - | reattach-to-user-namespace pbcopy&quot;'
+# copy to X11 clipboard
+if -b 'command -v xsel &gt; /dev/null 2&gt;&amp;1' 'bind y run -b &quot;tmux save-buffer - | xsel -i -b&quot;'
+if -b '! command -v xsel &gt; /dev/null 2&gt;&amp;1 &amp;&amp; command -v xclip &gt; /dev/null 2&gt;&amp;1' 'bind y run -b &quot;tmux save-buffer - | xclip -i -selection clipboard &gt;/dev/null 2&gt;&amp;1&quot;'
+# copy to Windows clipboard
+if -b 'command -v clip.exe &gt; /dev/null 2&gt;&amp;1' 'bind y run -b &quot;tmux save-buffer - | clip.exe&quot;'
+if -b '[ -c /dev/clipboard ]' 'bind y run -b &quot;tmux save-buffer - &gt; /dev/clipboard&quot;'
+
+
+# -- buffers -------------------------------------------------------------------
+
+bind b list-buffers  # list paste buffers
+bind p paste-buffer  # paste from the top paste buffer
+bind P choose-buffer # choose which buffer to paste from
+
+
+# -- user defined overrides ----------------------------------------------------
+
+if '[ -f ~/.tmux.conf.local ]' 'source ~/.tmux.conf.local'
+
+
+# -- 8&lt; ------------------------------------------------------------------------
+
+#run 'cut -c3- ~/.tmux.conf | sh -s _apply_configuration'
+run -b '[ -z &quot;#{window_active}&quot; ] &amp;&amp; [ -z &quot;#{version}&quot; ] &amp;&amp; tmux set display-time 3000 \; display &quot;This configuration will soon require tmux &gt;= 2.4&quot; \; set -u display-time || true'
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../tmux/Bindings.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../vim/Shortcuts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../tmux/Bindings.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../vim/Shortcuts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

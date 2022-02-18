@@ -1,0 +1,1683 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>notes</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Arduino</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arduino/CLI.html"><strong aria-hidden="true">2.1.</strong> CLI</a></li><li class="chapter-item expanded "><a href="arduino/LoRaWAN.html"><strong aria-hidden="true">2.2.</strong> LoRaWAN</a></li><li class="chapter-item expanded "><a href="arduino/PlatformIO.html"><strong aria-hidden="true">2.3.</strong> PlatformIO</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Bash</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="bash/Misc.html"><strong aria-hidden="true">3.1.</strong> Miscellaneous</a></li><li class="chapter-item expanded "><a href="bash/Search.html"><strong aria-hidden="true">3.2.</strong> Searching</a></li><li class="chapter-item expanded "><a href="bash/Web.html"><strong aria-hidden="true">3.3.</strong> Web Functions</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> C++</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="c++/CMake.html"><strong aria-hidden="true">4.1.</strong> CMake</a></li><li class="chapter-item expanded "><a href="c++/CPMmake.html"><strong aria-hidden="true">4.2.</strong> CPM-Make</a></li><li class="chapter-item expanded "><a href="c++/JSON.html"><strong aria-hidden="true">4.3.</strong> JSON</a></li><li class="chapter-item expanded "><a href="c++/LLDB-Cheatsheet.html"><strong aria-hidden="true">4.4.</strong> LLDB (Debugger)</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Docker</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="docker/Commands.html"><strong aria-hidden="true">5.1.</strong> Cheat Sheet</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Git</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/Commands.html"><strong aria-hidden="true">6.1.</strong> Cheat Sheet</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Pandoc</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="pandoc/Commands.html"><strong aria-hidden="true">7.1.</strong> Cheat Sheet</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Python</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="python/Dates.html"><strong aria-hidden="true">8.1.</strong> Datetimes</a></li><li class="chapter-item expanded "><a href="python/Numpy.html"><strong aria-hidden="true">8.2.</strong> Numpy</a></li><li class="chapter-item expanded "><a href="python/Pandas.html"><strong aria-hidden="true">8.3.</strong> Pandas</a></li><li class="chapter-item expanded "><a href="python/Plotting.html"><strong aria-hidden="true">8.4.</strong> Plotting</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Raspberry Pi</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="raspberry-pi/Webserver.html"><strong aria-hidden="true">9.1.</strong> Web-server</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Tmux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="tmux/Bindings.html"><strong aria-hidden="true">10.1.</strong> Bindings</a></li><li class="chapter-item expanded "><a href="tmux/Config.html"><strong aria-hidden="true">10.2.</strong> Config</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Vim</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="vim/Shortcuts.html"><strong aria-hidden="true">11.1.</strong> Cheat Sheet</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="home"><a class="header" href="#home">Home</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="arduino-command-line-interface-cli"><a class="header" href="#arduino-command-line-interface-cli">Arduino Command Line Interface (CLI)</a></h1>
+<h2 id="description"><a class="header" href="#description">Description</a></h2>
+<p>Build and run arduino sketches from the command line.</p>
+<h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
+<p>Website: <a href="https://arduino.github.io/arduino-cli/latest/installation/">Installing ArduinoCLI</a></p>
+<p>Homebrew:</p>
+<pre><code class="language-bash">brew install arduino-cli
+</code></pre>
+<h2 id="setup"><a class="header" href="#setup">Setup</a></h2>
+<p>Website: <a href="https://arduino.github.io/arduino-cli/latest/getting-started/">Getting Started</a></p>
+<pre><code class="language-bash">arduino-cli help core # Help page
+# Create config file to store commands so i dont have to type them in the terminal
+arduino-cli config init # Create yaml file 
+arduino-cli sketch new SKETCH_NAME # Create new sketch in current dir
+arduino-cli core update-index # Update cli with latest libraries and boards
+arduino-cli board list # List connected devices (core shows the device i need to install)
+arduino-cli core install arduino:samd # Install boards (change arduino:samd for core value)
+arduino-cli core list # List all installed boards
+arduino-cli lib search SEARCH_TERM # search for a library
+arduino-cli lib install LIBRARY # Install a lib from the searched items
+</code></pre>
+<p>If I want to install 3<sup>rd</sup> party boards see the above link.</p>
+<h2 id="run"><a class="header" href="#run">Run</a></h2>
+<pre><code class="language-bash">arduino-cli core update-index
+arduino-cli sketch new FILENAME # Folder must be same name as file
+arduino-cli board list # Get name of board and FQBN (Fully qualified board name)
+arduino-cli compile --fqbn arduino:avr:nano FILENAME # replace arduino bit with FQBN
+arduino-cli upload -p YourBoardPort --fqbn YourBoardFQBN YourSketchName # Upload 
+</code></pre>
+<p>Probably best to create a bash executable for each project / board so you can run all these processes in the background.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lorawan-libraries"><a class="header" href="#lorawan-libraries">LoRaWAN Libraries</a></h1>
+<h2 id="description-1"><a class="header" href="#description-1">Description</a></h2>
+<p>Low power wide area network protocol (LoRaWAN) is used to send long range messages between nodes and clients. These messages are quite small ~51 bytes, but with proper packaging can provide sufficient information for capturing remote sensor data.</p>
+<h2 id="setup-1"><a class="header" href="#setup-1">Setup</a></h2>
+<h3 id="mcci-lmic---arduino-lmic"><a class="header" href="#mcci-lmic---arduino-lmic">MCCI-lmic - arduino-lmic</a></h3>
+<p>Fairly low-level library that requires some configuration to ensure the right region is selected before integrating into your project.</p>
+<p>Documentation: <a href="https://github.com/mcci-catena/arduino-lmic">arduino-lmic</a></p>
+<h4 id="installation-1"><a class="header" href="#installation-1">Installation</a></h4>
+<p>To install navigate to the Arduino Library Manager and search for &quot;MCCI-limc&quot;.</p>
+<p>Alternatively, download the repository as a zip and unpack it in your Arduino/Libraries folder.</p>
+<p>Before using, navigate to lmic_project_config.h (in Arduino/Libraries/MCCI-lmic folder) and comment out regions except for your specific region.</p>
+<pre><code class="language-cpp">//#define CFG_eu868 1
+//#define CFG_us915 1
+#define CFG_au915 1
+//#define CFG_as923 1
+//#define LMIC_COUNTRY_CODE LMIC_COUNTRY_CODE_JP	/* for as923-JP */
+//#define CFG_kr920 1
+//#define CFG_in866 1
+</code></pre>
+<h3 id="alternative-arduino-lorawan"><a class="header" href="#alternative-arduino-lorawan">Alternative (arduino-lorawan)</a></h3>
+<p>Higher level more &quot;arduinoesque&quot; type library.</p>
+<p>Documentation: <a href="https://github.com/mcci-catena/arduino-lorawan">arduino-lorawan</a></p>
+<h2 id="other-good-resources"><a class="header" href="#other-good-resources">Other good resources</a></h2>
+<p><a href="https://marcoroda.com/2020/04/12/TTGO-LORA-TTN.html">Node-Red with LoRaWAN Node</a>
+<a href="https://learn.adafruit.com/the-things-network-for-feather/arduino-code">Adafruit LoRaWAN tutorial</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="platformio"><a class="header" href="#platformio">PlatformIO</a></h1>
+<h2 id="description-2"><a class="header" href="#description-2">Description</a></h2>
+<p>Platform IO allows for easy uploading and viewing of microcontroller input and outputs. This information covers the command line interface for PlatformIO.</p>
+<p>Website: <a href="https://platformio.org/">PlatformIO</a></p>
+<h2 id="install"><a class="header" href="#install">Install</a></h2>
+<p>Curl (requires python):</p>
+<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py -o get-platformio.py
+python3 get-platformio.py
+</code></pre>
+<p>Add given path to PATH variables. If confused see this <a href="https://docs.platformio.org/en/latest/core/installation.html">link</a>.</p>
+<p>Homebrew (MacOS &amp; Linux):</p>
+<pre><code class="language-bash">brew install platformio
+</code></pre>
+<h2 id="setup-2"><a class="header" href="#setup-2">Setup</a></h2>
+<p>Website: <a href="https://docs.platformio.org/en/latest/core/userguide/index.html">User Guide</a></p>
+<p>Pretty sure platformio-cli requires the main file name to be the same as the folder name.</p>
+<pre><code class="language-bash">pio project init # Init project in current dir with folders and resources
+</code></pre>
+<p>Edit the .yml file with project specific configuration.</p>
+<pre><code class="language-bash">[env:teensy41]
+platform = teensy
+board = teensy41
+framework = arduino
+
+board_build.mcu = imxrt1062
+
+lib_deps =
+milesburton/DallasTemperature @^3.9.1
+
+upload_protocol = teensy-cli
+
+platform_packages = 
+toolchain-gccarmnoneeabi@~1.90301.200702
+tool-teensy@https://github.com/maxgerhardt/pio-tool-teensy-arm/archive/master.zip
+
+</code></pre>
+<h2 id="execute"><a class="header" href="#execute">Execute</a></h2>
+<pre><code class="language-bash">pio --help # Display help
+pio run # Compile code
+pio run -t upload # Run then upload
+pio run -e board_name -t upload # Run and upload to specific board
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="miscellaneous"><a class="header" href="#miscellaneous">Miscellaneous</a></h1>
+<h2 id="description-3"><a class="header" href="#description-3">Description</a></h2>
+<p>Various bash commands that are useful but don't have a specific order that is worthy of their own page. Also contains useful terminal based programs.</p>
+<h2 id="date-and-time"><a class="header" href="#date-and-time">Date and Time</a></h2>
+<pre><code class="language-bash">cal # Display calendar
+cal -3 # Display calendar with next and prev month
+date # Display date
+</code></pre>
+<h2 id="system"><a class="header" href="#system">System</a></h2>
+<p>Display certain system information.</p>
+<pre><code class="language-bash">top # Display current processes
+system_profiler SPDisplayDataType | grep Resolution # Get sys resolution (MacOS)
+</code></pre>
+<h2 id="tree"><a class="header" href="#tree">Tree</a></h2>
+<p>Displays the current folders tree structure in the terminal.</p>
+<pre><code class="language-bash">brew install tree # Install
+tree # Run to display tree structure
+</code></pre>
+<h2 id="newsboat"><a class="header" href="#newsboat">Newsboat</a></h2>
+<p>RSS terminal reader for RSS feeds.</p>
+<pre><code class="language-bash">brew install newboat # Install
+newsboat # Run
+vi ~/.newsboat/urls # Add RSS feed URL's
+vi ~/.newsboat/config # Add specific configuration
+</code></pre>
+<p>For config resources see this <a href="https://wiki.archlinux.org/index.php/Newsboat#Configuration">link</a>.</p>
+<h2 id="file-transfer-for-android-devices"><a class="header" href="#file-transfer-for-android-devices">File transfer (for android devices)</a></h2>
+<p>Add and remove files from android device on a mac. Run from GUI application after installation.</p>
+<pre><code class="language-bash">brew install --cash android-file-transfer # Install
+</code></pre>
+<h2 id="zshrc"><a class="header" href="#zshrc">zshrc</a></h2>
+<pre><code class="language-bash">
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Path to your oh-my-zsh installation.
+export ZSH=&quot;/Users/harveybates/.oh-my-zsh&quot;
+
+# Set name of the theme to load --- if set to &quot;random&quot;, it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME=&quot;robbyrussell&quot;
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( &quot;robbyrussell&quot; &quot;agnoster&quot; )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE=&quot;true&quot;
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE=&quot;true&quot;
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE=&quot;true&quot;
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT=&quot;true&quot;
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=&quot;true&quot;
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS=&quot;true&quot;
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE=&quot;true&quot;
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION=&quot;true&quot;
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
+# COMPLETION_WAITING_DOTS=&quot;true&quot;
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY=&quot;true&quot;
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# &quot;mm/dd/yyyy&quot;|&quot;dd.mm.yyyy&quot;|&quot;yyyy-mm-dd&quot;
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS=&quot;mm/dd/yyyy&quot;
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH=&quot;/usr/local/man:$MANPATH&quot;
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS=&quot;-arch x86_64&quot;
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+# Custom configuration
+# Use vim keystrokes in terminal
+bindkey -v
+plugins=(
+	  vi-mode
+  )
+
+# Farm Decsion TECH
+# Run farm decision tech docker
+alias fdt=&quot;docker run -p 80:80 -v $PWD/var/www:/var/www --security-opt seccomp=unconfined --name zz fdtwebsite&quot;
+# Run a shell in farm decision tech docker
+alias fdtshell=&quot;docker exec -it zz bash&quot;
+# Remove verbose and with confirmation
+alias rm=&quot;rm -i -v&quot;
+# Youtube download
+alias yt=&quot;youtube-dl --add-metadata -ic&quot; # Video
+alias yta=&quot;youtube-dl --add-metadata -xic&quot; # Audio only
+
+export PATH=&quot;/usr/local/opt/openjdk/bin:$PATH&quot;
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+PATH=&quot;$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools&quot;
+
+export GNUTERM=&quot;qt font \&quot;Arial,12\&quot;&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="searching-in-the-terminal"><a class="header" href="#searching-in-the-terminal">Searching in the Terminal</a></h1>
+<h2 id="description-4"><a class="header" href="#description-4">Description</a></h2>
+<p>Commands for searching for/within files and folders in the terminal.</p>
+<h2 id="find"><a class="header" href="#find">Find</a></h2>
+<p>Useful for finding files and folders that match your search term. Must include quotations when searching. Full-stop represents the current working directory.</p>
+<pre><code class="language-bash">find . -name &quot;search_term&quot; # Search for files matching *search_term*
+find . -name &quot;*.cpp&quot; # Search for files matching widcard - extension
+</code></pre>
+<h2 id="search-within-files-with-grep"><a class="header" href="#search-within-files-with-grep">Search within files with grep</a></h2>
+<p>Use grep to search for occurrences of words or characters within files and folders.</p>
+<pre><code class="language-bash">grep &quot;search_term&quot; &quot;filename&quot; # Search for occurances of search_term in a given file
+grep &quot;search_term&quot; * # Search all files in dir for occurances
+grep -E &quot;word1|word2&quot; * # Search for multiple search terms
+grep -rl &quot;search_term&quot; /path # Search subriectories and print out filenames with matches
+</code></pre>
+<h3 id="grep-flags"><a class="header" href="#grep-flags">Grep flags</a></h3>
+<pre><code class="language-bash">-w # Only display whole words
+-i # Non-case sensitive
+-r # Search sub-directories as well
+-c # Count number of matches in each file
+-E # Search for multiple search terms
+-x # Only show exact matches
+</code></pre>
+<h2 id="regex"><a class="header" href="#regex">Regex</a></h2>
+<pre><code class="language-bash">\ # Escape following character	
+. # Any one character
+* # Any number of previous character (including none)
++ # Any number of previous character (not including zero)
+$ # End of line
+^ # Beginning of line
+\S # Any non-whitespace character
+\s # Any whitespace character
+? # Optional
+[a-z] or [:lower:] # Match any lowercase character from a to z
+[A-Z] or [:upper:] # Match any uppercase character from A to Z
+[0-9] or [:digit:] # Match any digit between 0 and 9
+[A-Za-z] # Any letter
+\n # New line
+\r # Carriage return 
+\t # Tab
+? # Optional
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="web-functions-in-the-terminal"><a class="header" href="#web-functions-in-the-terminal">Web Functions in the Terminal</a></h1>
+<h2 id="description-5"><a class="header" href="#description-5">Description</a></h2>
+<p>Commands for downloading and interacing with websites and web hosted files.</p>
+<h2 id="curl"><a class="header" href="#curl">Curl</a></h2>
+<p>Website: <a href="https://curl.se/">Curl</a></p>
+<p>Used in termial to tranfer data over http/s.</p>
+<pre><code class="language-bash">curl https://www.example.com # Show html in terminal
+curl https://www.example.com -O example.html # Save to html
+curl https://www.example.com/filename.cpp -O &quot;filename.cpp&quot; # Save a file
+# or
+curl -O http://www.example.com/filename.cpp &quot;filename.cpp&quot;
+</code></pre>
+<h2 id="wget"><a class="header" href="#wget">WGet</a></h2>
+<pre><code class="language-bash">wget http://www.example.com/filename.cpp # Download file
+</code></pre>
+<h2 id="ping"><a class="header" href="#ping">Ping</a></h2>
+<p>Test website, get IP address and echo response.</p>
+<pre><code class="language-bash">ping sitename.com # Test site and get public IP address
+ping -6 sitename.com # Request IPv6
+ping -4 sitename.com # Request IPv4
+ping -a sitename.com # Generate sound on successful request
+</code></pre>
+<h2 id="lync-web-browser-in-terminal"><a class="header" href="#lync-web-browser-in-terminal">Lync (Web Browser in Terminal)</a></h2>
+<p>Lynx is a command line web browser, it works well in most cases.</p>
+<p>Website: <a href="https://www.commandlinux.com/man-page/man1/lynx.1.html">Lynx</a></p>
+<h3 id="install-homebrew"><a class="header" href="#install-homebrew">Install (Homebrew):</a></h3>
+<pre><code class="language-bash">brew install lynx
+</code></pre>
+<h3 id="execute-1"><a class="header" href="#execute-1">Execute</a></h3>
+<pre><code class="language-bash">lynx # Run
+lynx sitename.com # Run on specific site
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cmake-introduction"><a class="header" href="#cmake-introduction">CMake Introduction</a></h1>
+<h2 id="description-6"><a class="header" href="#description-6">Description</a></h2>
+<p>CMake allows for C++ applications to be compiled without entering library, linkers and files manually each time you want to compile your project.</p>
+<h2 id="installation-2"><a class="header" href="#installation-2">Installation</a></h2>
+<p>Main Site: <a href="https://cmake.org/install/">CMake</a></p>
+<h3 id="homebrew-macos--linux"><a class="header" href="#homebrew-macos--linux">Homebrew (MacOS &amp; Linux)</a></h3>
+<pre><code class="language-bash">brew install --cask cmake
+</code></pre>
+<h2 id="setup-3"><a class="header" href="#setup-3">Setup</a></h2>
+<p>Create a file called CMakeLists.txt in your working directory</p>
+<h3 id="define-operating-system"><a class="header" href="#define-operating-system">Define Operating System</a></h3>
+<pre><code class="language-cmake">if(UNIX AND NOT APPLE)
+	... # Linux
+elseif(APPLE)
+	... # MacOS
+else()
+	... # Windows
+endif()
+</code></pre>
+<h3 id="define-minimum-version"><a class="header" href="#define-minimum-version">Define Minimum Version</a></h3>
+<p>Documentation: <a href="https://cmake.org/cmake/help/latest/command/cmake_minimum_required.html">cmake_minimum_required</a></p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION &quot;3.19.2&quot;)
+# Just use current version you are using
+</code></pre>
+<h3 id="define-project-name"><a class="header" href="#define-project-name">Define Project Name</a></h3>
+<pre><code class="language-cmake">project(&quot;project_name&quot;)
+</code></pre>
+<h3 id="locate-installed-package"><a class="header" href="#locate-installed-package">Locate Installed Package</a></h3>
+<pre><code class="language-cmake">find_package(*package_name* REQUIRED)
+</code></pre>
+<h3 id="set-source-directory"><a class="header" href="#set-source-directory">Set Source Directory</a></h3>
+<pre><code class="language-cmake">set(NAME_SRC
+	src/main.cpp
+	src/example.cpp)
+</code></pre>
+<h3 id="set-include-directory"><a class="header" href="#set-include-directory">Set Include Directory</a></h3>
+<p>This is where all your C++ header (.h or .hpp) files will be located</p>
+<pre><code class="language-cmake">set(NAME_H
+	include/main.h
+	include/example.h)	
+</code></pre>
+<h3 id="set-executable-path"><a class="header" href="#set-executable-path">Set Executable Path</a></h3>
+<p>This is where an executable (.exe) file will be generated.</p>
+<pre><code class="language-cmake">set(EXE_PATH ${CMAKE_BINARY_DIR}/bin)
+# CMAKE_BINARY_DIR represents the directroy where your CMakeLists.txt file is located
+</code></pre>
+<h3 id="include-directories"><a class="header" href="#include-directories">Include Directories</a></h3>
+<pre><code class="language-cmake">include_directories(${CMAKE_SOURCE_DIR}/include ...)
+</code></pre>
+<h3 id="add-executable"><a class="header" href="#add-executable">Add Executable</a></h3>
+<p>Add components to create an executable.</p>
+<pre><code class="language-cmake">add_executable(${PROJECT_NAME} ${NAME_SRC} ${NAME_H})
+</code></pre>
+<h3 id="add-compile-features"><a class="header" href="#add-compile-features">Add Compile Features</a></h3>
+<p>Add custom compile features such as the C++ version to be used.</p>
+<pre><code class="language-cmake">target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
+</code></pre>
+<h3 id="link-libraries"><a class="header" href="#link-libraries">Link Libraries</a></h3>
+<p>Link your project to external libraries.</p>
+<pre><code class="language-cmake">target_link_libraries(${PROJECT_NAME} PRIVATE *library_name* ...)
+</code></pre>
+<h3 id="target-include-directories"><a class="header" href="#target-include-directories">Target Include Directories</a></h3>
+<p>Target - links to specific project</p>
+<p>Normal - links globally</p>
+<pre><code class="language-cmake">target_include_directories(${PROJECT_NAME} PRIVATE *library_name* ...)
+</code></pre>
+<h2 id="overall-structure"><a class="header" href="#overall-structure">Overall Structure</a></h2>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION &quot;3.19.2&quot;)
+
+project(&quot;project_name&quot;)
+
+find_package(*package_name* REQUIRED)
+
+set(NAME_SRC
+	src/main.cpp
+	src/example.cpp)
+
+set(NAME_H
+	include/main.h
+	include/example.h)
+
+set(EXE_PATH ${CMAKE_BINARY_DIR}/bin)
+
+include_directories(${CMAKE_SOURCE_DIR}/include ...)
+
+add_executable(${PROJECT_NAME} ${NAME_SRC} ${NAME_H})
+
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE *library_name* ...)
+
+target_include_directories(${PROJECT_NAME} PRIVATE *library_name* ...)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cpm-make"><a class="header" href="#cpm-make">CPM-Make</a></h1>
+<h2 id="description-7"><a class="header" href="#description-7">Description</a></h2>
+<p>Adds dependencies to current machine upon building CMake for the first time. For example, if a specific dependency is needed for the current project, it will be downloaded before compiling your C++ application. This module also allows for linking of said dependency if it is downloaded successfully.</p>
+<h2 id="installation-3"><a class="header" href="#installation-3">Installation</a></h2>
+<p>Main Site: <a href="https://github.com/cpm-cmake/CPM.cmake">CPM-Make GitHub</a></p>
+<h3 id="manual-install"><a class="header" href="#manual-install">Manual Install</a></h3>
+<p>To install navigate to this <a href="https://github.com/cpm-cmake/CPM.cmake/releases">link</a> and download the latest release.	</p>
+<p>Add CPM.camke to the location where CMakeLists.txt file is located.</p>
+<h3 id="automatic-download-with-cmake"><a class="header" href="#automatic-download-with-cmake">Automatic download (with CMake)</a></h3>
+<p>CPM-Make can be downloaded directly by CMake. To do this you need to add the following code snippet to the start of your CMakeLists.txt file.</p>
+<pre><code class="language-cmake">set(CPM_DOWNLOAD_VERSION 0.28.4)
+# Set download version to latest release before executing 
+
+if(CPM_SOURCE_CACHE)
+	set(CPM_DOWNLOAD_LOCATION &quot;${CPM_SOURCE_CACHE}/cpm/CPM_${CPM_DOWNLOAD_VERSION}.cmake&quot;)
+elseif(DEFINED ENV{CPM_SOURCE_CACHE})
+	set(CPM_DOWNLOAD_LOCATION &quot;$ENV{CPM_SOURCE_CACHE}/cpm/CPM_${CPM_DOWNLOAD_VERSION}.cmake&quot;)
+else()
+	set(CPM_DOWNLOAD_LOCATION &quot;${CMAKE_BINARY_DIR}/cmake/CPM_${CPM_DOWNLOAD_VERSION}.cmake&quot;)
+endif()
+
+if(NOT (EXISTS ${CPM_DOWNLOAD_LOCATION}))
+	message(STATUS &quot;Downloading CPM.cmake to ${CPM_DOWNLOAD_LOCATION}&quot;)
+	file(DOWNLOAD
+			https://github.com/TheLartians/CPM.cmake/releases/download/v${CPM_DOWNLOAD_VERSION}/CPM.cmake
+			${CPM_DOWNLOAD_LOCATION}
+		)
+endif()
+
+include(${CPM_DOWNLOAD_LOCATION})
+</code></pre>
+<h2 id="add-a-package"><a class="header" href="#add-a-package">Add a Package</a></h2>
+<p>Add a package to your C++ project. I am not sure if the list of packages is limited to those listed in on this page. Perhaps other packages can be installed this way with the right configuration.</p>
+<pre><code class="language-cmake">CPMAddPackage(
+		NAME # The unique name of the dependency (should be the exported target's name)
+		VERSION	# The minimum version of the dependency (optional, defaults to 0)
+		OPTIONS	# Configuration options passed to the dependency (optional)
+		DOWNLOAD_ONLY # If set, the project is downloaded, but not configured (optional)
+		[...]         # Origin parameters forwarded to FetchContent_Declare, see below
+		)
+</code></pre>
+<h2 id="link-a-library"><a class="header" href="#link-a-library">Link a Library</a></h2>
+<p>Once downloaded and added it needs to be linked to your C++ project.</p>
+<pre><code class="language-cmake">if(*library_name*_ADDED)
+	add_library(*library_name* INTERFACE)
+	include_directories(${*library_source_dir}/include}
+	target_include_directories(${PROJECT_NAME} INTERFACE ${*library_source_dir}/include)
+	target_link_libraries{${PROJECT_NAME} *library_name*}
+endif()
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="using-json-with-c"><a class="header" href="#using-json-with-c">Using JSON with C++</a></h1>
+<h2 id="description-8"><a class="header" href="#description-8">Description</a></h2>
+<p>JSON formatted data is a great asset for sending and receiving formatted information. In C++ the nlohmann library provides an easy way to create and display JSON formatted data.</p>
+<p>Documentation: <a href="https://github.com/nlohmann/json">https://github.com/nlohmann/json</a></p>
+<h2 id="installation-4"><a class="header" href="#installation-4">Installation</a></h2>
+<p>Homebrew (MacOS &amp; Linux)</p>
+<pre><code class="language-bash">brew install nlohmann-json
+</code></pre>
+<h2 id="linking"><a class="header" href="#linking">Linking</a></h2>
+<p>Link with CMakeLists.txt (CMake):</p>
+<pre><code class="language-cmake">find_package(nlohmann_json 3.2.0 REQUIRED)
+target_link_libraries(foo PRIVATE nlohmann_json::nlohmann_json)
+</code></pre>
+<h3 id="cpm-make-package-manager"><a class="header" href="#cpm-make-package-manager">CPM-Make (Package manager):</a></h3>
+<p>Check in releases for the latest version.</p>
+<p>You will need the URL specific to that release version and the SHA256 key.</p>
+<p>Only get the include folder as we don't want to download all the test examples.</p>
+<pre><code class="language-cmake">CPMAddPackage(
+	NAME nlohmann_json
+	VERSION 3.9.0
+	# Just get the latest (3.9.0) version, and only the include folder as the rep is big
+	URL https://github.com/nlohmann/json/releases/download/v3.9.0/include.zip
+	URL_HASH SHA256=5b9b819aed31626aefe2eace23498cafafc1691890556cd36d2a8002f6905009
+)
+</code></pre>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<h3 id="initialisation"><a class="header" href="#initialisation">Initialisation</a></h3>
+<pre><code class="language-cpp">#include &quot;nlohmann/json.hpp&quot;
+using json = nlohmann::json;
+</code></pre>
+<h3 id="construct-json-class"><a class="header" href="#construct-json-class">Construct JSON Class</a></h3>
+<pre><code class="language-cpp">json j;
+</code></pre>
+<h3 id="add-values"><a class="header" href="#add-values">Add values</a></h3>
+<pre><code class="language-cpp">j[&quot;value_name&quot;] = &quot;value&quot;; // Single value
+j[&quot;value_name1&quot;][&quot;value_name2&quot;] = &quot;value&quot;; // Nested value
+</code></pre>
+<h3 id="convert-string-to-json-object"><a class="header" href="#convert-string-to-json-object">Convert string to JSON object</a></h3>
+<pre><code class="language-cpp">std::string input = &quot;{&quot;happy&quot;:true,&quot;pi&quot;:3.141}&quot;;
+j = input;
+std::cout &lt;&lt; j.dump(4) &lt;&lt; std::endl;
+</code></pre>
+<h3 id="print-formatted-json-object"><a class="header" href="#print-formatted-json-object">Print formatted JSON object</a></h3>
+<pre><code class="language-cpp">int n = 4;
+// n represents an int for the number of spaces to indent
+std::cout &lt;&lt; j.dump(n) &lt;&lt; std::endl;
+</code></pre>
+<h3 id="example-output"><a class="header" href="#example-output">Example output</a></h3>
+<pre><code class="language-json">{
+	&quot;value_name&quot;: &quot;value&quot;, 
+	&quot;value_name1&quot; {
+		&quot;value_name2&quot;: &quot;value&quot;
+	}
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lldb-cheatsheet"><a class="header" href="#lldb-cheatsheet">LLDB Cheatsheet</a></h1>
+<p>LLDB is a debugger for C/C++ that runs in the terminal.</p>
+<p><code>(lldb)</code> denotes a function being run in lldb.</p>
+<h3 id="summary"><a class="header" href="#summary">Summary</a></h3>
+<pre><code class="language-bash"># Opening
+c++ -g -std=c++17 -o &lt;output_exe&gt; &lt;file_name&gt; # With debug flags (-g)
+lldb main # Open executable main
+
+# Breakpoints
+(lldb) b main.cpp : &lt;line_number&gt; # Set breakpoint online number
+(lldb) b set -n &lt;function_name&gt; # e.g. Foo(int)
+(lldb) br l # List breakpoints
+(lldb) br del &lt;line_number&gt; # Delete breakpoint
+
+# Run
+(lldb) r
+
+# Watch variable
+(lldb) watch set var &lt;variable_name&gt;
+(lldb) watch modify -c '(&lt;variable_name&gt; == 5)' # Break on condition
+(lldb) watch list
+
+# Navigation
+(lldb) n # Next line
+(lldb) s # Step into function on current line
+(lldb) c # Continue until next breakpoint (or end)
+
+# Variables
+(lldb) p &lt;variable_name&gt; # Print variable value
+(lldb) fr v # Print all variables in current frame
+
+# Frames
+(lldb) fr s # Current point of execution
+(lldb) fr v # Print all variables in current frame
+(lldb) fr s &lt;frame_id&gt; # Go to specific frame
+(lldb) bt # List frames up until point
+
+# Exiting
+(lldb) kill # Kill the process (but stay in lldb)
+(lldb) quit # Exit lldb
+</code></pre>
+<h3 id="open-file"><a class="header" href="#open-file">Open File</a></h3>
+<pre><code class="language-bash">lldb main # Where main is your executable
+# Note main must be compiled with -g flag
+# E.g. c++ -g -std=c++17 -o main main.cpp
+
+# or
+lldb
+(lldb) file &quot;path/to/file&quot;
+
+# or if arguments are supplied 
+lldb -- main arg1 arg2 # note the -- before the executable
+</code></pre>
+<h3 id="breakpoints"><a class="header" href="#breakpoints">Breakpoints</a></h3>
+<p>Executable must be compiled with the <code>-g</code> flag.</p>
+<h4 id="set"><a class="header" href="#set">Set</a></h4>
+<p>By line number:</p>
+<pre><code class="language-bash">(lldb) breakpoint set -f &lt;filename&gt; -l &lt;line_number&gt;
+# or
+(lldb) b &lt;filename&gt; : &lt;line_number&gt;
+# or
+(lldb) break &lt;filename&gt; : &lt;line_number&gt;
+</code></pre>
+<p>By function:</p>
+<pre><code class="language-bash">(lldb) breakpoint set --name &lt;function_name&gt;
+# or
+(lldb) b set -n &lt;function_name&gt; # e.g. Foo(int)
+</code></pre>
+<p>On a class method:</p>
+<pre><code class="language-bash">(lldb) b Foo::foo()
+</code></pre>
+<p>Inside a namespace:</p>
+<pre><code class="language-bash">(lldb) b NameSpace::foo(int)
+</code></pre>
+<h4 id="list"><a class="header" href="#list">List</a></h4>
+<pre><code class="language-bash">(lldb) breakpoint list
+# or
+(lldb) br l
+</code></pre>
+<h4 id="delete"><a class="header" href="#delete">Delete</a></h4>
+<p>Deletion is based on the breakpoint ID (obtained using <code>br l</code>).</p>
+<pre><code class="language-bash">(lldb) br del # All
+(lldb) br del &lt;line_number&gt; # Specific
+</code></pre>
+<h4 id="watch"><a class="header" href="#watch">Watch</a></h4>
+<p>Watch a specific variable to see it changes (also based on conditionals). Must be running before setting.</p>
+<pre><code class="language-bash">(lldb) watch set var &lt;variable_name&gt;
+# Stop based on condition
+(lldb) watch modify -c '(&lt;variable_name&gt; == 5)'
+# List watch
+(lldb) watch list
+</code></pre>
+<h3 id="run-1"><a class="header" href="#run-1">Run</a></h3>
+<pre><code class="language-bash">process launch
+# or
+(lldb) run
+# or
+(lldb) r
+</code></pre>
+<h3 id="navigation"><a class="header" href="#navigation">Navigation</a></h3>
+<h4 id="step-over"><a class="header" href="#step-over">Step Over</a></h4>
+<p>Go to next line.</p>
+<pre><code class="language-bash">(lldb) next
+# or 
+(lldb) n
+</code></pre>
+<h4 id="step-into"><a class="header" href="#step-into">Step Into</a></h4>
+<p>Go into function on current line. If multiple (functions) exist it will go into them in order.</p>
+<pre><code class="language-bash">(lldb) step
+# or
+(lldb) s
+</code></pre>
+<h4 id="continue"><a class="header" href="#continue">Continue</a></h4>
+<p>Run until next breakpoint or end of program.</p>
+<pre><code class="language-bash">(lldb) continue
+# or
+(lldb) c
+</code></pre>
+<h3 id="variables"><a class="header" href="#variables">Variables</a></h3>
+<h4 id="inspecting"><a class="header" href="#inspecting">Inspecting</a></h4>
+<p>View variable contents.</p>
+<pre><code class="language-bash">(lldb) print &lt;variable_name&gt;
+# or
+(lldb) p &lt;variable_name&gt;
+</code></pre>
+<h4 id="frames"><a class="header" href="#frames">Frames</a></h4>
+<p>Inspect all variables around a specific call site.</p>
+<pre><code class="language-bash">(lldb) frame &lt;variable_name&gt;
+# or
+(lldb) fr v 
+</code></pre>
+<p>See what frame the debugger is up to. Or select a specific frame.</p>
+<pre><code class="language-bash">(lldb) frame select
+# or
+(lldb) fr s # Current point of execution
+
+# Or to see a specific frame
+(lldb) frame select &lt;frame_id&gt;
+# or
+(lldb) fr s &lt;frame_id&gt;
+</code></pre>
+<h4 id="back-tracing"><a class="header" href="#back-tracing">Back-tracing</a></h4>
+<p>Lists the current call stack. Most recent function at the top of the stack (descending order). </p>
+<pre><code class="language-bash">(lldb) bt
+</code></pre>
+<p>Useful for debugging crashes by seeing the programs state before the crash occurred, for example:</p>
+<pre><code class="language-bash">lldb main
+(lldb) r
+# Error occurs
+(lldb) bt # List frames of execution
+(llsb) fr s &lt;frame_id&gt; # Select frame before crash
+(llsb) fr v # List varaibles prior to crash
+</code></pre>
+<h3 id="terminating"><a class="header" href="#terminating">Terminating</a></h3>
+<pre><code class="language-bash"># Kill the process (but stay in lldb)
+(lldb) kill
+# Exit lldb
+(lldb) quit
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="docker-commands"><a class="header" href="#docker-commands">Docker commands</a></h1>
+<h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
+<h3 id="containers"><a class="header" href="#containers">Containers</a></h3>
+<p>Build a container using a Dockerfile in the current directory.</p>
+<pre><code class="language-bash">docker build -t &lt;desired_container_name&gt; . 
+</code></pre>
+<p>Run a container in the background using port mapping.</p>
+<pre><code class="language-bash">docker run -dp 3000:3000 &lt;container_name&gt;
+</code></pre>
+<p>List containers</p>
+<pre><code class="language-bash">docker ps # Running only
+docker ps -a # All containers
+docker ps -s # Disk usage by container
+</code></pre>
+<p>Stop a container</p>
+<pre><code class="language-bash">docker stop &lt;container_id&gt;
+</code></pre>
+<p>Remove a container</p>
+<pre><code class="language-bash">docker rm &lt;container_id&gt; # Container id is obtained from &quot;docker ps&quot;
+</code></pre>
+<h3 id="volumes"><a class="header" href="#volumes">Volumes</a></h3>
+<p>Persistant storage (db) that wont be removed if the container is stopped.
+Create a volume </p>
+<pre><code class="language-bash">docker volume create &lt;desired_volume_name&gt;
+</code></pre>
+<p>Run a container with a volume</p>
+<pre><code class="language-bash">docker run -dp 3000:3000 -v &lt;volume_name&gt;:/etc/&lt;folder_name&gt; &lt;container_name&gt;
+</code></pre>
+<h3 id="bind-mounts"><a class="header" href="#bind-mounts">Bind mounts</a></h3>
+<p>Locations where updates to files can be made without having to rebuild the container. Useful for coding changes locally and having the updates occur in the docker container.
+Example from: https://docs.docker.com/get-started/06_bind_mounts/ </p>
+<pre><code class="language-bash"> docker run -dp 3000:3000 \
+     -w /app -v &quot;$(pwd):/app&quot; \
+     node:12-alpine \
+     sh -c &quot;yarn install &amp;&amp; yarn run dev&quot;
+</code></pre>
+<p>The <code>-v &quot;$(pwd):/app&quot;</code> controls the current bind directory.</p>
+<h3 id="logs"><a class="header" href="#logs">Logs</a></h3>
+<p>See log processes:</p>
+<pre><code class="language-bash">docker log -f &lt;container_id&gt;
+</code></pre>
+<h3 id="simple-processes"><a class="header" href="#simple-processes">Simple processes</a></h3>
+<p>MySQL db</p>
+<pre><code class="language-bash"># Create mysql instance
+docker run -d \
+     --network todo-app --network-alias mysql \
+     -v todo-mysql-data:/var/lib/mysql \
+     -e MYSQL_ROOT_PASSWORD=&lt;db_password&gt; \
+     -e MYSQL_DATABASE=&lt;db_name&gt; \
+     mysql:5.7
+
+# Check if working and connect to db
+docker exec -it &lt;mysql-container-id&gt; mysql -u root -p
+</code></pre>
+<p>Networking functions</p>
+<pre><code class="language-bash">docker run -it --network todo-app nicolaka/netshoot
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="version-control-using-git"><a class="header" href="#version-control-using-git">Version control using Git</a></h1>
+<h2 id="description-9"><a class="header" href="#description-9">Description</a></h2>
+<p>Useful commands for using git control system.</p>
+<h2 id="setup-4"><a class="header" href="#setup-4">Setup</a></h2>
+<p>Direct: <a href="https://git-scm.com/">Install Git</a></p>
+<p>Homebrew (MacOS &amp; Linux):</p>
+<pre><code class="language-bash">brew install git
+</code></pre>
+<h2 id="clone-repository"><a class="header" href="#clone-repository">Clone repository</a></h2>
+<pre><code class="language-bash">git clone &quot;https://repositoryname.com&quot;
+</code></pre>
+<h2 id="initialise-remote-repository"><a class="header" href="#initialise-remote-repository">Initialise remote repository</a></h2>
+<pre><code class="language-bash">git remote add origin &quot;https://repositoryname.com&quot;
+git remote -v # Check if remote origin has been added
+</code></pre>
+<h2 id="normal-workflow"><a class="header" href="#normal-workflow">Normal workflow</a></h2>
+<pre><code class="language-bash">git add .
+git commit -m &quot;commit message goes here&quot;
+git push origin master
+</code></pre>
+<h2 id="status"><a class="header" href="#status">Status</a></h2>
+<pre><code class="language-bash">git status # Get information
+</code></pre>
+<h2 id="branches"><a class="header" href="#branches">Branches</a></h2>
+<pre><code class="language-bash">git branch &quot;branchname&quot; # Create a branch
+git branch or git branch --list # List branches
+git branch -d &quot;branchname&quot; # Delete branch
+git branch -m &quot;newbranchname&quot; # Rename branch
+git branch -d &quot;branchname&quot; # Delete branch
+git checkout &quot;branchname&quot; # Switch to branch (after commiting chages to current branch)
+</code></pre>
+<h2 id="pushing-changes"><a class="header" href="#pushing-changes">Pushing changes</a></h2>
+<pre><code class="language-bash">git push origin master # Push to master branch
+git push -u origin &quot;branchname&quot; # Push to new branch (create it on push)
+</code></pre>
+<h2 id="stash"><a class="header" href="#stash">Stash</a></h2>
+<p>Save current branch without committing.</p>
+<pre><code class="language-bash">git stash # Save current changes
+git stash # Get back changes
+git stash list # List stashed changes
+</code></pre>
+<h2 id="cached"><a class="header" href="#cached">Cached</a></h2>
+<pre><code class="language-bash">git rm --cached . # Remove files from commit (usesful for when adding items to .gitignore)
+</code></pre>
+<h2 id="reset"><a class="header" href="#reset">Reset</a></h2>
+<p>After a bad commit use this to get back to a previous commit. <strong>Note you will loose changes made so back up your files somehow...</strong></p>
+<pre><code class="language-bash">git reset --hard &quot;gitcommitkey&quot; # Git commit key found on github
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="useful-pandoc-commands"><a class="header" href="#useful-pandoc-commands">Useful Pandoc commands</a></h1>
+<h2 id="description-10"><a class="header" href="#description-10">Description</a></h2>
+<p>Useful for converting files from one markup to another (e.g. .tex -&gt; html).</p>
+<h2 id="setup-5"><a class="header" href="#setup-5">Setup</a></h2>
+<p>Direct: <a href="https://pandoc.org/installing.html">Install Pandoc</a></p>
+<p>Homebrew (MacOS &amp; Linux):</p>
+<pre><code class="language-bash">brew install pandoc
+</code></pre>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
+<h3 id="metadata"><a class="header" href="#metadata">Metadata</a></h3>
+<p>Insert at top of <code>.md</code> file to give some metadata in the form of a <code>.yml</code> file (without actually creating a <code>.yml</code> file).</p>
+<pre><code class="language-yml">---
+title: TITLE
+author:
+- Author
+date: \today{}
+header: Header
+footer: Footer
+geometry: margin=3cm
+abstract: Enter abstract 
+header-includes:
+- \usepackage{setspace}
+- \doublespacing
+- \usepackage{lineno}
+- \linenumbers
+...
+</code></pre>
+<h3 id="links"><a class="header" href="#links">Links</a></h3>
+<p>Add some links to the header.</p>
+<pre><code class="language-html">&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://harveybates.xyz/&quot;&gt;Home&lt;/a&gt; - &lt;a 
+href=&quot;https://harveybates.xyz/knowledge/index&quot;&gt;Back&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="markdown-to-html"><a class="header" href="#markdown-to-html">Markdown to html</a></h3>
+<pre><code class="language-bash">pandoc -s input.md -c style.css -o output.html --metadata=&quot;Title&quot;
+</code></pre>
+<h3 id="latex-to-markdown"><a class="header" href="#latex-to-markdown">LaTeX to markdown</a></h3>
+<pre><code class="language-bash">pandoc -s input.tex -o output.text
+</code></pre>
+<h3 id="markdown-to-pdf"><a class="header" href="#markdown-to-pdf">Markdown to pdf</a></h3>
+<pre><code class="language-bash">pandoc -s input.md -o output.pdf
+</code></pre>
+<h4 id="citations"><a class="header" href="#citations">Citations</a></h4>
+<p>Define in <code>.bib</code> file.</p>
+<pre><code class="language-latex">@article{name2020,
+	author={Name, LastName},
+	title={Title},
+	journal={Journal},
+	year={2020},
+}
+</code></pre>
+<p>Define in text.</p>
+<pre><code class="language-md">[@name2020]
+</code></pre>
+<p>Compile in terminal.</p>
+<pre><code class="language-bash">pandoc -s input.md --bibliography=ref.bib --citeproc -o output.pdf
+</code></pre>
+<h3 id="figure-numbering"><a class="header" href="#figure-numbering">Figure numbering</a></h3>
+<p>Using <a href="https://github.com/tomduck/pandoc-fignos">pandoc-fignos</a>.</p>
+<h4 id="install-1"><a class="header" href="#install-1">Install</a></h4>
+<pre><code class="language-bash">python3 -m pip install pandoc-fignos --user
+</code></pre>
+<h4 id="use"><a class="header" href="#use">Use</a></h4>
+<p>Define figure with caption:</p>
+<pre><code class="language-markdown">![Caption.](image.png){#fig:Name}
+</code></pre>
+<p>Reference figure with &quot;Fig&quot; extension:</p>
+<pre><code class="language-markdown">\*@Fig:Name
+</code></pre>
+<p>When compiling use the following tag.</p>
+<pre><code class="language-bash">--filter pandoc-fignos
+</code></pre>
+<h3 id="slide-show-beamer"><a class="header" href="#slide-show-beamer">Slide show (beamer)</a></h3>
+<pre><code class="language-bash">pandoc -t beamer input.md -o output.pdf
+pandoc -t beamer input.tex -o output.pdf
+</code></pre>
+<h3 id="other"><a class="header" href="#other">Other</a></h3>
+<p>Useful commands can be found on the pandoc site.
+<a href="https://pandoc.org/demos.html">https://pandoc.org/demos.html</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="working-with-dates-in-python"><a class="header" href="#working-with-dates-in-python">Working with dates in Python</a></h1>
+<h2 id="description-11"><a class="header" href="#description-11">Description</a></h2>
+<p>Useful commands when working with dates in python.</p>
+<h2 id="imports"><a class="header" href="#imports">Imports</a></h2>
+<p>Data sorting, visualisation, basic statistics and line fitting.</p>
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+from datetime import datetime
+</code></pre>
+<h2 id="converting"><a class="header" href="#converting">Converting</a></h2>
+<p>Convert pandas dataframe column values to datetime.</p>
+<pre><code class="language-python">dataFrame[&quot;timestamps&quot;] = pd.to_datetime(dataFrame[&quot;timestamps&quot;])
+</code></pre>
+<p>Alternative for array data.</p>
+<pre><code class="language-python">dfTimeStamps = [datetime.strptime(time, &quot;%Y-%m-%d %H:%M:%S&quot;) for time in dataFrame[&quot;timestamps&quot;]]
+# Replace formatted string with your time stamp structure
+</code></pre>
+<h2 id="indexing"><a class="header" href="#indexing">Indexing</a></h2>
+<p>Get dataframe values between particular dates.</p>
+<pre><code class="language-python">range = dataFrame[dataFrame[&quot;timestamps&quot;].between(&quot;DD-MM-YYYY HH:MM:SS&quot;, &quot;DD-MM-YYYY HH:MM:SS&quot;)]
+</code></pre>
+<h2 id="aligning"><a class="header" href="#aligning">Aligning</a></h2>
+<p>Align date times from two separate dataframes. Useful for analysing data from separate sources.</p>
+<pre><code class="language-python"># May have to remove minute and second values if they don't match
+df1[&quot;matching_column_name&quot;] = df1[&quot;matching_column_name&quot;].apply(lambda t: t.replace(minute=0, second=0))
+df2[&quot;matching_column_name&quot;] = df2[&quot;matching_column_name&quot;].apply(lambda t: t.replace(minute=0, second=0))
+
+mergedDataFrame = pd.merge_asof(df1, df2, on=&quot;matching_column_name&quot;) # This will drop any values that don't match
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="numpy"><a class="header" href="#numpy">Numpy</a></h1>
+<h2 id="description-12"><a class="header" href="#description-12">Description</a></h2>
+<p>Useful commands for numpy.</p>
+<h2 id="import"><a class="header" href="#import">Import</a></h2>
+<pre><code class="language-python">import numpy as np
+</code></pre>
+<h2 id="random"><a class="header" href="#random">Random</a></h2>
+<pre><code class="language-python">np.random.randint(10) # Generates random int between 0 and 10
+np.random.random(4) # Generates random array of length 4 between 0 and 1
+np.random.rand(2, 3) # Generates 2 x 3 array of floats between 0 and 1
+</code></pre>
+<h2 id="create-numpy-array"><a class="header" href="#create-numpy-array">Create numpy array</a></h2>
+<p>Basic array:</p>
+<pre><code class="language-python">array = np.array([1, 2, 3, 4])
+# or 
+array = [1, 2, 3, 4]
+array = np.array(array) # &gt;[1, 2, 3, 4]
+</code></pre>
+<p>Zero filled array:</p>
+<pre><code class="language-python">array = np.zeros(4) # &gt;[0, 0, 0, 0]
+</code></pre>
+<p>1D array with <em>n</em> numbers:</p>
+<pre><code class="language-python">array = np.arange(4) # &gt;[0, 1, 2, 3]
+</code></pre>
+<p>1D random array:</p>
+<pre><code class="language-python">array = np.random.random(4) # &gt;[0.521, 0.219, 0.972, 0.814]
+</code></pre>
+<p>1D evenly spaced array between two numbers:</p>
+<pre><code class="language-python">array = np.linspace(0, 1, 4) # &gt;[0, 0.333, 0.666, 1]
+# np.linspace(start, stop, n)
+</code></pre>
+<h2 id="operations"><a class="header" href="#operations">Operations</a></h2>
+<pre><code class="language-python">np.copy(arr) # Copy array
+np.append(arr, vals) # Appends to end of array
+np.insert(arr, 3, vals) # Appends before index 3
+np.concatenate((arr, arr1), axis=0) # Put arr1 at end of arr
+np.split(arr, 2) # Split into two arrays
+np.sort(arr)
+np.reshape(3, 5) # Reshape to 3 by 5
+</code></pre>
+<h2 id="information"><a class="header" href="#information">Information</a></h2>
+<pre><code class="language-python">np.shape(arr)
+arr.dtype # Get datatype within array
+arr.size # Get size of array
+np.array_equal(arr, arr1) # Compare arrays
+</code></pre>
+<h2 id="arithmetic-operations"><a class="header" href="#arithmetic-operations">Arithmetic Operations</a></h2>
+<pre><code class="language-python">np.max(arr)
+np.min(arr)
+np.sum(arr)
+np.mean(arr) # Mean of arr
+np.std(arr) # Stdev of arr
+np.sqrt(arr)
+np.exp(arr) # Exponent of arr
+np.add(arr, arr1) 
+np.subtract(arr, arr1)
+np.divide(arr, arr1)
+np.multiply(arr, arr1)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pandas-useful-commands"><a class="header" href="#pandas-useful-commands">Pandas useful commands</a></h1>
+<h2 id="import-1"><a class="header" href="#import-1">Import</a></h2>
+<p>Data sorting, visualisation, basic statistics and line fitting.</p>
+<pre><code class="language-python">import pandas as pd
+</code></pre>
+<h2 id="create-dataframe-pandas"><a class="header" href="#create-dataframe-pandas">Create dataframe (pandas)</a></h2>
+<p>Using <code>.csv</code> files.</p>
+<pre><code class="language-python">dataframe = pd.read_csv(&quot;filename.csv&quot;) # Basic loading
+dataframe = pd.read_csv(&quot;filename.csv&quot;).dropna() # Remove null values
+dataframe = pd.read_csv(&quot;filename.csv&quot;, delimiter=';') # Define seperator
+</code></pre>
+<p>Using <code>.xlsx</code> files.</p>
+<pre><code class="language-python">dataframe = pd.read_excel(&quot;filename.csv&quot;) # Basic loading
+dataframe = pd.read_csv(&quot;filename.csv&quot;, sheet_name=&quot;name&quot;) # Define sheet name
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="plotting-data-in-python-with-matplotlib"><a class="header" href="#plotting-data-in-python-with-matplotlib">Plotting data in Python with Matplotlib</a></h1>
+<h2 id="description-13"><a class="header" href="#description-13">Description</a></h2>
+<p>Useful commands for programming within Jupyter Notebook.</p>
+<h2 id="data-preparation"><a class="header" href="#data-preparation">Data Preparation</a></h2>
+<h3 id="useful-imports"><a class="header" href="#useful-imports">Useful imports</a></h3>
+<p>Data sorting, visualisation, basic statistics and line fitting.</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import matplotlib.ticker as mticker
+import seaborn as sns
+</code></pre>
+<h2 id="plotting-data"><a class="header" href="#plotting-data">Plotting Data</a></h2>
+<h3 id="subplots"><a class="header" href="#subplots">Subplots</a></h3>
+<pre><code class="language-python">fig, ax = plt.subplots(1, 1, figsize=(8,8)) # Single column
+fig, (ax, ax1) = plt.subplots(1, 2, figsize=(8, 8)) # Single column multiple plots
+fig, [[ax, ax1], [ax2, ax3]] = plt.suplots(2, 2) # Multi-row multi-column 
+</code></pre>
+<h3 id="basic-settings"><a class="header" href="#basic-settings">Basic Settings</a></h3>
+<pre><code class="language-python">ax.set_ylabel(&quot;LABEL&quot;)
+ax.set_xlabel(&quot;LABEL&quot;)
+ax.grid(color=&quot;lightgrey&quot;)
+ax.set_ylim(lower, upper)
+ax.set_xlim(lower, upper)
+ax.legend(loc=&quot;upper right&quot;)
+</code></pre>
+<h3 id="dates"><a class="header" href="#dates">Dates</a></h3>
+<pre><code class="language-python">ax.set_xlim([datetime.date(YYYY, MM, DD), datetime.date(YYYY, MM, DD)])
+ax.xaxis.set_major_locator(mdates.DayLocator(interval=n))
+ax.xaxis.set_major_locator(mdates.MonthLocator(interval=n))
+plt.setp(ax.get_xticklabels(), rotation=30, ha=&quot;right, rotation_mode=&quot;anchor&quot;)
+</code></pre>
+<h3 id="text-and-arrows"><a class="header" href="#text-and-arrows">Text and Arrows</a></h3>
+<pre><code class="language-python">ax.text(0.05, 0.95, &quot;TEXT&quot;, transform=ax.transAxes, fontsize=16, va='top')
+ax.annotate('TEXT', xy=(0, 0), xytext=(0, 0),
+            arrowprops=dict(facecolor='black', shrink=0.05))
+</code></pre>
+<h3 id="exporting-and-displaying"><a class="header" href="#exporting-and-displaying">Exporting and Displaying</a></h3>
+<pre><code class="language-python">plt.tight_layout() # Use this or bbox_inches
+plt.savefig(&quot;name.png&quot;, dpi=300, bbox_inches='tight')
+plt.show()
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="raspberry-pi-web-server-http-and-https"><a class="header" href="#raspberry-pi-web-server-http-and-https">Raspberry Pi Web-Server (http and https)</a></h1>
+<h2 id="description-14"><a class="header" href="#description-14">Description</a></h2>
+<p>Information for setting up a secure (https) webserver using a raspberry pi, nginx, certbot and a DNS provider. Based on a tutoiral from Luke Smith; however, in this version, a Raspberry Pi was used to host the site instead of a cloud service provider such as Amazon. Other good resources include this video from Fireship, which talks about the deployment of a website on a Raspberry Pi.</p>
+<h2 id="proxy-server-nginx"><a class="header" href="#proxy-server-nginx">Proxy Server (nginx)</a></h2>
+<ol>
+<li>Reverse proxy server (TCP/UDP)</li>
+<li>Documentation: <a href="https://nginx.org/en/">nginx</a></li>
+<li>Tutorial: <a href="https://pimylifeup.com/raspberry-pi-nginx/">PiMyLifeUp</a></li>
+</ol>
+<h3 id="installation-5"><a class="header" href="#installation-5">Installation</a></h3>
+<pre><code class="language-bash">sudo apt-get remove apache2 # Ensure apache2 in not installed
+sudo apt-get install nginx # Install
+</code></pre>
+<h3 id="setup-6"><a class="header" href="#setup-6">Setup</a></h3>
+<p>Copy the default nginx configuration to a new configuration:</p>
+<pre><code class="language-bash">cp /etc/nginx/sites-available/default /etc/nginx/sites-available/your_site_name # Replace your_site_name
+</code></pre>
+<p>Edit the newly created file (/etc/nginx/sites-available/your_site_name) to display the following</p>
+<pre><code class="language-bash">server {
+	listen 80;
+	listen [::]:80 ;
+
+	root /var/www/*website_file_dir*;
+
+	index index.html index.htm index.nginx-debian.html;
+	
+	server_name *your_website_address*;
+
+	location / {
+		if ($request_uri ~ ^/(.*)\.html) {
+			return 302 /$1;
+		}
+		try_files $uri $uri.html $uri/ =404;
+	}
+</code></pre>
+<p>The code in the location scope allow html files to be indexed without a .html extension in the websites URL.</p>
+<p>Put newley created configuration into enabled sites directory:</p>
+<pre><code class="language-bash">ln -s /etc/nginx/sites-available/your_site_name /etc/nginx/sites-enabled/
+</code></pre>
+<p>Make directory that holds website files (index.html etc.):</p>
+<pre><code class="language-bash">mkdir /var/www/your_site_name
+cd /var/www/your_site_name
+touch index.html # Create and edit mainpage as needed
+</code></pre>
+<h3 id="nginx-commands"><a class="header" href="#nginx-commands">nginx Commands</a></h3>
+<pre><code class="language-bash">sudo systemctl start nginx # Start server
+sudo systemctl status nginx # Server status
+sudo systemctl stop nginx # Stop server
+sudo systemctl restart nginx # Reboot server
+sudo killall nginx # Stop all processes
+</code></pre>
+<h2 id="https-certificate-certbot"><a class="header" href="#https-certificate-certbot">HTTPS Certificate (certbot)</a></h2>
+<p>Gives your website a certificate of security that browsers can recognise and thus wont show that the site is insecure.</p>
+<h3 id="installation-6"><a class="header" href="#installation-6">Installation</a></h3>
+<pre><code class="language-bash">sudo apt-get install certbo python-certbot-nginx
+</code></pre>
+<h3 id="setup-7"><a class="header" href="#setup-7">Setup</a></h3>
+<pre><code class="language-bash">sudo certbot --nginx
+</code></pre>
+<p>Follow the following commands:</p>
+<ol>
+<li>Enter email</li>
+<li>Agree to terms of service</li>
+<li>Don't share email</li>
+<li>Select https addresses</li>
+<li>Redirect http to https</li>
+</ol>
+<p>Note that certbot certificates expire every six months. To renew:</p>
+<pre><code class="language-bash">sudo certbot renew # Renew certificate
+</code></pre>
+<h2 id="port-forwarding"><a class="header" href="#port-forwarding">Port Forwarding</a></h2>
+<p>You need to setup port forwarding on your router in order for users outside your local network to access your site.</p>
+<pre><code class="language-bash">ip route # Find router address
+</code></pre>
+<p>Type the router address into a browser, navigate to port forwarding and add:</p>
+<ol>
+<li>Protocol: TCP</li>
+<li>WAN port: 80</li>
+<li>LAN port: 80</li>
+<li>Destination IP address: local_ip_address</li>
+</ol>
+<p>You may also need to set (port 80 for http and 443 for https):</p>
+<ol>
+<li>Protocol: TCP</li>
+<li>WAN port: 443</li>
+<li>LAN port: 443</li>
+<li>Destination IP address: local_ip_address</li>
+</ol>
+<h2 id="other-useful-commands"><a class="header" href="#other-useful-commands">Other Useful Commands</a></h2>
+<pre><code class="language-bash">hostname -I # Get local IP address
+curl icanhazip.com # Get public IPv6 address
+curl ipv4.icanhazip.com # Get public IPv4 address
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tmux-bindings"><a class="header" href="#tmux-bindings">Tmux Bindings</a></h1>
+<h2 id="description-15"><a class="header" href="#description-15">Description</a></h2>
+<p>Useful tmux keybindings.</p>
+<h2 id="tmux-mode"><a class="header" href="#tmux-mode">Tmux mode</a></h2>
+<pre><code class="language-bash">Ctrl-a # Enter tmux mode
+</code></pre>
+<h2 id="window-navigation"><a class="header" href="#window-navigation">Window Navigation</a></h2>
+<pre><code class="language-bash">c # New window
+tab # Swap between windows
+n # Next window
+0...9 # Window by number
+</code></pre>
+<h2 id="panes-navigation"><a class="header" href="#panes-navigation">Panes Navigation</a></h2>
+<pre><code class="language-bash">; # Swap between panes
+&quot; # Split horizontally
+% # Split vertically
+} # Enter scroll mode
+! # Convert pane to window
+resize-pane -U (-D -L -R) 10 # Resize pane by number
+</code></pre>
+<p>To exit tmux, type exit in the command line.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tmux-configuration"><a class="header" href="#tmux-configuration">Tmux Configuration</a></h1>
+<h2 id="description-16"><a class="header" href="#description-16">Description</a></h2>
+<p>Settings used for Tmux.</p>
+<h2 id="sourcing-tmux-configuration"><a class="header" href="#sourcing-tmux-configuration">Sourcing Tmux Configuration</a></h2>
+<p>In the terminal.</p>
+<pre><code class="language-bash">tmux source-file ~/.tmux.conf
+</code></pre>
+<p>In Tmux (Requires being in tmux mode (ctrl-a)).</p>
+<pre><code class="language-bash">:source-file ~/.tmux.conf
+</code></pre>
+<h2 id="powerline"><a class="header" href="#powerline">Powerline</a></h2>
+<p>Powerline is a status line plugin for vim and tmux (plus some others).</p>
+<h3 id="installation-7"><a class="header" href="#installation-7">Installation</a></h3>
+<p>Powerline requires Python (so if you don't have python you need that). Also you need pip to install.</p>
+<pre><code class="language-bash">pip install powerline status
+# or
+pip3 install powerline-status
+# or
+python3 -m pip install powerline-status
+</code></pre>
+<p>You need to add this line to your .tmux.conf file and then source your configuration.</p>
+<pre><code class="language-bash">source &quot;/usr/local/lib/python3.9/site-packages/powerline/bindings/tmux/powerline.conf&quot;
+</code></pre>
+<p>If you get problems with the installed fonts (i.e. you get question marks in your powerline) you need to install a powerline specific font.</p>
+<p>To do this, navigate to this <a href="https://github.com/powerline/fonts">link</a> and clone the library.</p>
+<pre><code class="language-bash">git clone https://github.com/powerline/fonts
+cd fonts
+./install.sh # Install powerline fonts
+</code></pre>
+<p>Now navigate to your terminal preferences and change your font to a powerline specific font. (I am using &quot;Meslo LG S Regular for Powerline 11pt&quot;).</p>
+<h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
+<pre><code class="language-bash"># -- general -------------------------------------------------------------------
+
+set -g default-terminal &quot;screen-256color&quot; # colors!
+source &quot;/usr/local/lib/python3.9/site-packages/powerline/bindings/tmux/powerline.conf&quot;
+setw -g xterm-keys on
+set -s escape-time 10                     # faster command sequences
+set -sg repeat-time 600                   # increase repeat timeout
+set -s focus-events on
+
+unbind C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+bind C-a send-prefix -2
+
+set -q -g status-utf8 on                  # expect UTF-8 (tmux &lt; 2.2)
+setw -q -g utf8 on
+
+set -g history-limit 5000                 # boost history
+
+# edit configuration
+bind e new-window -n &quot;~/.tmux.conf.local&quot; &quot;EDITOR=\${EDITOR//mvim/vim} &amp;&amp; EDITOR=\${EDITOR//gvim/vim} &amp;&amp; \${EDITOR:-vim} ~/.tmux.conf.local &amp;&amp; tmux source ~/.tmux.conf &amp;&amp; tmux display \&quot;~/.tmux.conf sourced\&quot;&quot;
+
+# reload configuration
+bind r source-file ~/.tmux.conf \; display '~/.tmux.conf sourced'
+
+
+# -- display -------------------------------------------------------------------
+
+set -g base-index 1           # start windows numbering at 1
+setw -g pane-base-index 1     # make pane numbering consistent with windows
+
+setw -g automatic-rename on   # rename window to reflect current program
+set -g renumber-windows on    # renumber windows when a window is closed
+
+set -g set-titles on          # set terminal title
+
+set -g display-panes-time 800 # slightly longer pane indicators display time
+set -g display-time 1000      # slightly longer status messages display time
+
+set -g status-interval 10     # redraw status line every 10 seconds
+
+# clear both screen and history
+bind -n C-l send-keys C-l \; run 'sleep 0.1' \; clear-history
+
+# activity
+set -g monitor-activity on
+set -g visual-activity off
+
+
+# -- navigation ----------------------------------------------------------------
+
+# find session
+bind C-f command-prompt -p find-session 'switch-client -t %%'
+
+# split current window horizontally
+bind - split-window -v
+# split current window vertically
+bind _ split-window -h
+
+# pane navigation
+bind -r h select-pane -L  # move left
+bind -r j select-pane -D  # move down
+bind -r k select-pane -U  # move up
+bind -r l select-pane -R  # move right
+bind &gt; swap-pane -D       # swap current pane with the next one
+bind &lt; swap-pane -U       # swap current pane with the previous one
+
+# maximize current pane
+bind + run 'cut -c3- ~/.tmux.conf | sh -s _maximize_pane &quot;#{session_name}&quot; #D'
+
+# window navigation
+bind Tab last-window        # move to last active window
+
+# toggle mouse
+bind m run &quot;cut -c3- ~/.tmux.conf | sh -s _toggle_mouse&quot;
+
+
+# -- urlview -------------------------------------------------------------------
+
+bind U run &quot;cut -c3- ~/.tmux.conf | sh -s _urlview #{pane_id}&quot;
+
+
+# -- facebook pathpicker -------------------------------------------------------
+
+bind F run &quot;cut -c3- ~/.tmux.conf | sh -s _fpp #{pane_id}&quot;
+
+
+# -- list choice (tmux &lt; 2.4) --------------------------------------------------
+
+# vi-choice is gone in tmux &gt;= 2.4
+run -b 'tmux bind -t vi-choice h tree-collapse 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice l tree-expand 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice K start-of-list 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice J end-of-list 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice H tree-collapse-all 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice L tree-expand-all 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-choice Escape cancel 2&gt; /dev/null || true'
+
+
+# -- edit mode (tmux &lt; 2.4) ----------------------------------------------------
+
+# vi-edit is gone in tmux &gt;= 2.4
+run -b 'tmux bind -ct vi-edit H start-of-line 2&gt; /dev/null || true'
+run -b 'tmux bind -ct vi-edit L end-of-line 2&gt; /dev/null || true'
+run -b 'tmux bind -ct vi-edit q cancel 2&gt; /dev/null || true'
+run -b 'tmux bind -ct vi-edit Escape cancel 2&gt; /dev/null || true'
+
+
+# -- copy mode -----------------------------------------------------------------
+
+bind Enter copy-mode # enter copy mode
+
+run -b 'tmux bind -t vi-copy v begin-selection 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi v send -X begin-selection 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-copy C-v rectangle-toggle 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi C-v send -X rectangle-toggle 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-copy y copy-selection 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi y send -X copy-selection-and-cancel 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-copy Escape cancel 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi Escape send -X cancel 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-copy H start-of-line 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi H send -X start-of-line 2&gt; /dev/null || true'
+run -b 'tmux bind -t vi-copy L end-of-line 2&gt; /dev/null || true'
+run -b 'tmux bind -T copy-mode-vi L send -X end-of-line 2&gt; /dev/null || true'
+
+# copy to macOS clipboard
+if -b 'command -v pbcopy &gt; /dev/null 2&gt;&amp;1' 'bind y run -b &quot;tmux save-buffer - | pbcopy&quot;'
+if -b 'command -v reattach-to-user-namespace &gt; /dev/null 2&gt;&amp;1' 'bind y run -b &quot;tmux save-buffer - | reattach-to-user-namespace pbcopy&quot;'
+# copy to X11 clipboard
+if -b 'command -v xsel &gt; /dev/null 2&gt;&amp;1' 'bind y run -b &quot;tmux save-buffer - | xsel -i -b&quot;'
+if -b '! command -v xsel &gt; /dev/null 2&gt;&amp;1 &amp;&amp; command -v xclip &gt; /dev/null 2&gt;&amp;1' 'bind y run -b &quot;tmux save-buffer - | xclip -i -selection clipboard &gt;/dev/null 2&gt;&amp;1&quot;'
+# copy to Windows clipboard
+if -b 'command -v clip.exe &gt; /dev/null 2&gt;&amp;1' 'bind y run -b &quot;tmux save-buffer - | clip.exe&quot;'
+if -b '[ -c /dev/clipboard ]' 'bind y run -b &quot;tmux save-buffer - &gt; /dev/clipboard&quot;'
+
+
+# -- buffers -------------------------------------------------------------------
+
+bind b list-buffers  # list paste buffers
+bind p paste-buffer  # paste from the top paste buffer
+bind P choose-buffer # choose which buffer to paste from
+
+
+# -- user defined overrides ----------------------------------------------------
+
+if '[ -f ~/.tmux.conf.local ]' 'source ~/.tmux.conf.local'
+
+
+# -- 8&lt; ------------------------------------------------------------------------
+
+#run 'cut -c3- ~/.tmux.conf | sh -s _apply_configuration'
+run -b '[ -z &quot;#{window_active}&quot; ] &amp;&amp; [ -z &quot;#{version}&quot; ] &amp;&amp; tmux set display-time 3000 \; display &quot;This configuration will soon require tmux &gt;= 2.4&quot; \; set -u display-time || true'
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vim-commands"><a class="header" href="#vim-commands">Vim Commands</a></h1>
+<h2 id="description-17"><a class="header" href="#description-17">Description</a></h2>
+<p>Useful vim commands for navigating files, creating, editing and deleting code.</p>
+<h2 id="modes"><a class="header" href="#modes">Modes</a></h2>
+<pre><code class="language-bash">i # Insert mode (before cursor)
+I # Insert mode (start of line)
+a # Insert mode (after cursor) 
+A # Insert mode (end of line)
+v # Visual mode
+V # Visual line mode
+Ctrl-v # Visual block
+: # Command mode
+</code></pre>
+<h2 id="navigation-1"><a class="header" href="#navigation-1">Navigation</a></h2>
+<pre><code class="language-bash">e # Move to end of word
+w # Jump forward a word
+w # Jump word forward
+b # Jump word backward
+% # Jump to corresponding bracket
+} # Jump up to next space
+{ # Jump down to next space
+gg # Top of file
+G # Bottom of file
+M # Middle of screen
+nG # Move to line number n
+'' # Return to last position
+</code></pre>
+<h2 id="view"><a class="header" href="#view">View</a></h2>
+<pre><code class="language-bash">zt # Cursor at top of screen
+zz # Put cursor at center of screen
+zb # Put cursor at bottom of screen
+</code></pre>
+<h2 id="modifying"><a class="header" href="#modifying">Modifying</a></h2>
+<pre><code class="language-bash">dd # Delete line
+dw # Delete word
+dit # Delete inside html tags
+dct # Delete inside html tages and go to insert mode
+da* # Delete around defined char (*)
+di* # Delete inside defined char (*)
+dG # Delete from cursor to end of file
+d} # Delete from cursor to next line break
+d{ # Delete from cursor to previous line break
+
+P # Paste before cursor
+p # Paste after cursor
+&quot;+P # Paste before cursor (or above line) from system clipboard
+&quot;+p # Paste after cursor (or next line) from system clipboard
+
+yw # Copy word
+yy # Copy line
+
+gQQ # Single line to multi-line
+J # Join lines
+
+:%s/\s+$//e # Remove whitespace from file
+</code></pre>
+<h2 id="searching"><a class="header" href="#searching">Searching</a></h2>
+<pre><code class="language-bash">?&quot;term&quot; # Search for term (case-sensitive)
+:noh # Stop highlighting
+</code></pre>
+<h3 id="regex-1"><a class="header" href="#regex-1">Regex</a></h3>
+<p>Find some useful vim regex patterns here: <a href="http://www.vimregex.com/">vimregex.com</a></p>
+<h2 id="multi-line-editing"><a class="header" href="#multi-line-editing">Multi-line Editing</a></h2>
+<pre><code class="language-bash">Ctrl-v # Enter visual block mode
+j or k # Move down or up rows
+i # Insert mode
+esc # Escape (whereafter rows should load)
+</code></pre>
+<p>Alternative using visual-multi (if installed).</p>
+<pre><code class="language-bash">Ctrl-n # Open visual multi
+n # Select next item
+i # Edit and insert new text
+esc esc # Escape visual multi-mode (must press twice)
+</code></pre>
+<h3 id="indent-or-de-indent-multiple-lines"><a class="header" href="#indent-or-de-indent-multiple-lines">Indent or De-Indent Multiple Lines</a></h3>
+<h4 id="entire-file"><a class="header" href="#entire-file">Entire file.</a></h4>
+<pre><code class="language-bash">gg=G
+</code></pre>
+<h4 id="selection"><a class="header" href="#selection">Selection</a></h4>
+<pre><code class="language-bash">v # Enter visual mode
+j or k # To select multiple lines
+0...9&lt; # To de-indent multiple times
+0...9&gt; # To indent multiple times
+</code></pre>
+<h2 id="tags"><a class="header" href="#tags">Tags</a></h2>
+<p>Helps navigate between classes and functions in large code bases. Requires CTags.</p>
+<h3 id="installation-8"><a class="header" href="#installation-8">Installation</a></h3>
+<pre><code class="language-bash">brew install ctags
+</code></pre>
+<h3 id="generate"><a class="header" href="#generate">Generate</a></h3>
+<p>In the folder contain scripts you can run one of the following commands.</p>
+<pre><code class="language-bash">ctags -R . # For all tags in all programs
+ctags -R --exclude=node_modules . # Exclude a folder
+ctags -R --exclude=.git --exclude=node_modules . # Exclude multiple folders
+</code></pre>
+<h3 id="usage-1"><a class="header" href="#usage-1">Usage</a></h3>
+<pre><code class="language-bash">:tags # Show tag stack
+:tag &quot;name&quot; # Go to defined tag
+Ctrl-] # Jump to tag definition
+:tn # Jump to next tag
+:tp # Jump to previous tag
+g] # See all tags for a selected definition
+```	
+
+## Config
+```bash
+call plug#begin('~/.vim/plugged')
+
+Plug 'https://github.com/octol/vim-cpp-enhanced-highlight'
+Plug 'https://github.com/preservim/nerdtree'
+Plug 'https://github.com/mg979/vim-visual-multi'
+Plug 'https://github.com/itchyny/lightline.vim'
+Plug 'https://github.com/MaxMEllon/vim-jsx-pretty'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
+Plug 'lervag/vimtex'
+Plug 'mattn/emmet-vim'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'StanAngeloff/php.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'https://github.com/cohama/lexima.vim'
+Plug 'zah/nim.vim'
+
+call plug#end()
+
+map &lt;C-o&gt; :NERDTreeToggle&lt;CR&gt;
+autocmd BufEnter * if tabpagenr('$') == 1 &amp;&amp; winnr('$') == 1 &amp;&amp; exists('b:NERDTree') &amp;&amp; b:NERDTree.isTabTree() |
+    \ quit | endif
+
+set encoding=UTF-8
+set cursorline
+set nocompatible
+set tabstop=4
+set showmatch 
+set backspace=indent,eol,start
+set shiftwidth=4
+set expandtab
+set autoindent
+set noexpandtab
+set ignorecase
+set smartcase
+set ai
+set number
+set hlsearch
+set ruler
+set relativenumber
+
+set linebreak
+set wrap &quot; 
+set t_md=
+set tw=0
+
+
+highlight Comment ctermfg=lightgrey
+highlight LineNr ctermfg=lightgrey
+highlight SpellBad ctermbg=black
+hi MatchParen cterm=bold ctermbg=none ctermfg=yellow
+set laststatus=2
+
+autocmd BufRead,BufNewFile *.txt setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.tex setlocal spell
+
+let g:vimtex_view_general_viewer = 'evince'
+
+let g:user_emmet_leader_key=','
+
+command! MakeTags !ctags -R .
+set tags=./tags,tags;$HOME
+set autochdir
+
+filetype plugin on
+set shell=bash\ -i
+
+if (has(&quot;autocmd&quot;) &amp;&amp; !has(&quot;gui_running&quot;))
+	augroup colorset
+		autocmd!
+		let s:white = { &quot;gui&quot;: &quot;#ABB2BF&quot;, &quot;cterm&quot;: &quot;145&quot;, &quot;cterm16&quot; : &quot;7&quot; }
+		autocmd ColorScheme * call onedark#set_highlight(&quot;Normal&quot;, { &quot;fg&quot;: s:white }) &quot; `bg` will not be styled since there is no `bg` setting
+	augroup END
+endif
+
+syntax on
+colorscheme onedark
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>
