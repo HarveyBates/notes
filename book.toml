@@ -1,0 +1,6 @@
+[book]
+authors = ["Harvey Bates"]
+language = "en"
+multilingual = false
+src = "src"
+title = "notes"
